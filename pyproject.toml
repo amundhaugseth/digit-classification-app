@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example-project"
+dynamic = ["version"]
+description = "Demonstrate the micromamba devcontainer"
+authors = [
+    { name = "Ben Mares", email = "services-micromamba-devcontainer@tensorial.com" },
+]
+license = "MIT"
+dependencies = [
+    "cowsay >=5.0",
+]
+requires-python = ">=3.10,<3.11"
+
+[tool.hatch.version]
+path = "python/example_project/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "python/example_project",
+]
+
+[project.scripts]
+example-hello-world = "example_project.main:hello"
+
+[tool.isort]
+src_paths = ["python/"]
+profile = "black"
