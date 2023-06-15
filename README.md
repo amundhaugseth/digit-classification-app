@@ -8,7 +8,7 @@ This repository contains a Streamlit application that uses a PyTorch model to cl
 2. Navigate to the project directory: `cd digit-classifier-app`
 3. Build the Docker image: `docker-compose build`
 4. Run the app: `docker-compose up`
-5. Open the app on 127.0.0.1:8501
+5. Open the app on [127.0.0.1:8501](URL)
 
 ## Project Structure
 
