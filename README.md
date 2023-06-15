@@ -13,26 +13,26 @@ This repository contains a Streamlit application that uses a PyTorch model to cl
 ## Project Structure
 
 - `.devcontainer`:
-    - `dev-conda-environment.yaml`: This file specifies the Python environment for the development container.
+  - `dev-conda-environment.yaml`: This file specifies the Python environment for the development container.
     - `dev.Dockerfile`: This file contains the instructions for building the development container.
     - `devcontainer.json`: This file contains the configuration for the development container.
 - `models/`: This directory contains the trained PyTorch model.
-    - `model.pth`: This file contains the trained PyTorch model.
+  - `model.pth`: This file contains the trained PyTorch model.
 - `python/`: This directory contains the Python source code for the project.
-    - `digit_classifier_app/`: This directory contains the source code for the Streamlit app.
-        - `__init__.py`: This file is an empty file that tells Python that this directory should be treated as a package.
-        - `app.py`: This file contains the source code for the Streamlit app.
-    - `example_project/`: This directory contains an example Python project.
-        - `__init__.py`: This file is an empty file that tells Python that this directory should be treated as a package.
-        - `main.py`: This file contains the source code for the example project.
-- `tests/`: This directory contains the unit tests for the application.
-    - `images/`: This directory contains test images.
-        - `test_image.jpg`: This file is a test image.
+  - `digit_classifier_app/`: This directory contains the source code for the Streamlit app.
     - `__init__.py`: This file is an empty file that tells Python that this directory should be treated as a package.
-    - `test_app.py`: This file contains the unit tests for the Streamlit app
+    - `app.py`: This file contains the source code for the Streamlit app.
+    - `config.py`: This file contains the configuration details for the application.
+  - `example_project/`: This directory contains an example Python project.
+    - `__init__.py`: This file is an empty file that tells Python that this directory should be treated as a package.
+    - `main.py`: This file contains the source code for the example project.
+- `tests/`: This directory contains the unit tests for the application.
+  - `images/`: This directory contains test images.
+    - `test_image.jpg`: This file is a test image.
+  - `__init__.py`: This file is an empty file that tells Python that this directory should be treated as a package.
+  - `test_app.py`: This file contains the unit tests for the Streamlit app
 
 - `conda-environment.yaml`: This file specifies the Python environment for the Docker container.
-- `config.py`: This file contains the configuration details for the application.
 - `docker-compose.yaml`: This file is used for defining and running the Docker application.
 - `Dockerfile`: This file contains the instructions for building the Docker image.
 - `pyproject.toml`: This file contains the metadata for the Python package.
