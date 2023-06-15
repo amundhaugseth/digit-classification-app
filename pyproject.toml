@@ -3,28 +3,33 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "example-project"
+name = "digit-classifier-app"
 dynamic = ["version"]
-description = "Demonstrate the micromamba devcontainer"
+description = "Handwritten Digit Classifier App"
 authors = [
-    { name = "Ben Mares", email = "services-micromamba-devcontainer@tensorial.com" },
+    { name = "Your Name", email = "your.email@example.com" },
 ]
 license = "MIT"
 dependencies = [
-    "cowsay >=5.0",
+    "streamlit >=0.79.0",
+    "torch >=1.9.0",
+    "numpy >=1.20.0",
+    "matplotlib >=3.4.0",
+    "scikit-learn >=0.24.0",
+    "Pillow >=8.2.0"
 ]
 requires-python = ">=3.10,<3.11"
 
 [tool.hatch.version]
-path = "python/example_project/__init__.py"
+path = "python/digit_classifier_app/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = [
-    "python/example_project",
+    "python/digit_classifier_app",
 ]
 
 [project.scripts]
-example-hello-world = "example_project.main:hello"
+digit-classifier = "digit_classifier_app.main:main"
 
 [tool.isort]
 src_paths = ["python/"]

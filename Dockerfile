@@ -20,8 +20,13 @@ RUN : \
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
 # Copy relevant files to the container
-COPY "python/example_project/" "python/example_project/"
-COPY pyproject.toml ./
+COPY "python/digit_classifier_app/" "python/digit_classifier_app/"
+COPY "python/digit_classifier_app/__init__.py" "python/digit_classifier_app/__init__.py"
+COPY "models/" "models/"
+COPY "pyproject.toml" "./"
 
 # Install the package
 RUN pip install --no-cache-dir --editable .
+
+# Set the command to run the app
+CMD ["streamlit", "run", "python/digit_classifier_app/app.py"]

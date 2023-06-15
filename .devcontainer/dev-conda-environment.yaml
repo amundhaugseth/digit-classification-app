@@ -1,50 +1,55 @@
 name: base
 category: dev
 channels:
-  - conda-forge
-  - pytorch  # Added pytorch channel to access PyTorch and its affiliated packages
+- conda-forge
+- pytorch    # Added pytorch channel to access PyTorch and its affiliated packages
 dependencies:
   # Python version
-  - python=3.10
+- python=3.10
 
   # Specifically added packages:
-  - pandas
-  - numpy
-  - scikit-learn
-  - seaborn
-  - matplotlib
-  - requests
-  - scipy
-  - pulp
+- pandas
+- python-dotenv
+- numpy
+- scikit-learn
+- seaborn
+- matplotlib
+- requests
+- scipy
+- streamlit
+- altair=4.1.0
+- pulp
+- pip:
+  - streamlit-drawable-canvas
 
   # Deep learning packages
-  - pytorch  # PyTorch for deep learning
-  - torchvision  # for computer vision tasks
-  - torchaudio  # for audio tasks
-  - cudatoolkit=11.1  # CUDA for GPU usage; ensure version compatibility with your system
+- pytorch    # PyTorch for deep learning
+- torchvision    # for computer vision tasks
+- torchaudio    # for audio tasks
+- cudatoolkit=11.1    # CUDA for GPU usage; ensure version compatibility with your system
 
   # Default utility packages from template:
-  - git  # Also installed from Ubuntu, but this is newer.
-  - xonsh
-  - pre-commit
-  - black
-  - isort
-  - flake8
-  - pytest
-  - dasel
-  - mamba
-  - pipx
-  - condax
-  - ipykernel  # Jupyter notebooks in VS Code
-  - nbformat  # Additional utilities for Jupyter notebooks (e.g. Plotly support)
-  - line_profiler
-  - cookiecutter
-  - cruft
-  - flake8-use-fstring
-  - flake8-blind-except
-  - flake8-builtins
-  - flake8-use-pathlib
-  - flake8-noqa
+- git    # Also installed from Ubuntu, but this is newer.
+- xonsh
+- pre-commit
+- black
+- isort
+- flake8
+- pytest
+- dasel
+- mamba
+- pipx
+- condax
+- ipykernel    # Jupyter notebooks in VS Code
+- nbformat    # Additional utilities for Jupyter notebooks (e.g. Plotly support)
+- line_profiler
+- cookiecutter
+- cruft
+- flake8-use-fstring
+- flake8-blind-except
+- flake8-builtins
+- flake8-use-pathlib
+- flake8-noqa
 
   # # In case you want to install packages from PyPI which aren't on Conda-Forge,
   # # uncomment this block and add them as follows:

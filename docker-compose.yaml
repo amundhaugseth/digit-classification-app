@@ -1,11 +1,13 @@
 # This is for starting the non-development Docker container.
 
-version: '3.7'
+version: '3.9'
 
 services:
-  example-project:
+  app:
     build:
       context: .
-    volumes:
-    - ${LOCAL_WORKSPACE_FOLDER:-.}:/usr/src
-    command: example-hello-world
+    ports:
+    - 8501:8501
+    environment:
+    - TZ=Europe/Berlin
+    command: streamlit run python/digit_classifier_app/app.py
